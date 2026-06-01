@@ -130,6 +130,12 @@ sequenceDiagram
 - **PostgreSQL**: Main read model for UI and feeds; use `tsvector` for full-text search.
 - **IPFS**: Store thesis content, avatars, comments. Pin via Pinata or self-hosted cluster.
 
+## 3.5 ABI Registry (`@orbital/abi-registry`)
+- **Canonical ABI source**: Holds the shared contract interface definitions used across the monorepo so frontend, backend, and contract-adjacent tooling all speak the same schema.
+- **Typed integration layer**: Provides a single package surface for generated bindings, ABI descriptors, and shared constants instead of duplicating contract signatures in multiple packages.
+- **Versioning boundary**: Makes ABI changes explicit and reviewable, which reduces drift between deployed contracts, client code, and documentation.
+- **Documentation anchor**: Serves as the package-level reference point for ABI consumers and links back to the repo architecture and open-source policy.
+
 ---
 
 # 4 — On-chain Design — Soroban Contracts

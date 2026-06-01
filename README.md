@@ -20,6 +20,15 @@ It allows users to create "calls" (predictions), back them with onchain stakes, 
 - **Smart Contracts**: Rust, Soroban
 - **Chain**: Stellar Testnet (Soroban)
 
+## 📦 Workspace Packages
+
+| Package | Path | Role |
+| --- | --- | --- |
+| `@backit/frontend` | `packages/frontend` | Next.js web application and user-facing UI |
+| `@backit/backend` | `packages/backend` | NestJS API server, indexing, and orchestration |
+| `@backit/contracts` | `packages/contracts` | Soroban smart contracts and contract tests |
+| `@orbital/abi-registry` | `packages/abi-registry` | Canonical ABI definitions and typed contract interfaces shared across the monorepo |
+
 ## 📦 Project Structure
 
 back-it-onstellar/
@@ -27,6 +36,7 @@ back-it-onstellar/
 │ ├── frontend/ # Next.js web application
 │ ├── backend/ # NestJS API server
 │ └── contracts/ # Soroban smart contracts + tests
+│ └── abi-registry/ # Shared ABI registry and typed contract interfaces
 ├── .gitignore
 ├── pnpm-workspace.yaml
 ├── turbo.json
